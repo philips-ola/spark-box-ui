@@ -3,6 +3,8 @@ import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import '../styles.css'
 import { QueryClient } from '@tanstack/react-query'
+import Header from '#/component/Header'
+import NotFound from '#/component/NotFound'
 
 // Added
 type RouterContext = {
@@ -31,13 +33,18 @@ head: () => ({
 }),
 
   component: RootComponent,
+  notFoundComponent: NotFound,
 })
 
 function RootComponent() {
   return (
-    <>
+    <div className='min-h-screen bg-gray-100 flex flex-col'>
       <HeadContent />
+      <Header />
+      <main className='flex justify-center p-6'>
+        <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8">
       <Outlet />
+      </div>
       <TanStackDevtools
         config={{
           position: 'bottom-right',
@@ -49,6 +56,8 @@ function RootComponent() {
           },
         ]}
       />
-    </>
+      </main>
+    </div>
   )
 }
+
