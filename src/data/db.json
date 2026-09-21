@@ -1,52 +1,186 @@
 {
   "ideas": [
-    {
-      "id": "1",
-      "title": "Airbnb for Garages",
-      "summary": "Rent out your garage for storage or parking.",
-      "description": "This platform allows homeowners to monetize unused garage space by offering it for short- or long-term storage, parking, or even micro-offices. Think Airbnb, but for underutilized residential garages. It could also provide insurance, keyless access, and a rating system for trust and safety.",
-      "tags": ["real estate", "marketplace", "sharing economy"],
-      "createdAt": "2025-04-27T10:00:00.000Z"
-    },
-    {
-      "id": "2",
-      "title": "Local Farm Box Subscription",
-      "summary": "Weekly produce delivery from nearby farms.",
-      "description": "A subscription box service connecting local farmers with urban dwellers looking for fresh produce. Customers receive a curated box each week containing fruits, vegetables, and artisanal goods sourced directly from nearby growers. It encourages local commerce, healthy eating, and seasonal variety.",
-      "tags": ["subscription", "local", "marketplace"],
-      "createdAt": "2025-04-28T14:30:00.000Z"
-    },
-    {
-      "id": "3",
-      "title": "Micro-SaaS for Freelancers",
-      "summary": "A personal dashboard to manage freelance work.",
-      "description": "A lightweight SaaS platform that helps freelancers track their clients, invoices, contracts, and income in one place. Built specifically for solopreneurs who don’t need bulky CRM tools but want visibility into their business and finances. Includes tax estimates, recurring invoice reminders, and expense logging.",
-      "tags": ["freelance", "saas", "tools"],
-      "createdAt": "2025-04-29T09:15:00.000Z"
-    },
-    {
-      "id": "4",
-      "title": "Virtual Closet Organizer",
-      "summary": "Your wardrobe, digitized and AI-personalized.",
-      "description": "An app that lets users take pictures of their clothes and upload them into a virtual closet. The app uses AI to suggest daily outfits based on the weather, calendar events, and style preferences. Features might include travel packing lists, outfit tracking, and a sharing option for friends to browse each other's closets.",
-      "tags": ["fashion", "ai", "productivity"],
-      "createdAt": "2025-04-25T16:45:00.000Z"
-    },
-    {
-      "id": "5",
-      "title": "Pet Sitter Marketplace",
-      "summary": "Book trusted sitters and walkers in your area.",
-      "description": "A two-sided platform where pet owners can find, book, and review local pet sitters and dog walkers. All providers go through background checks and can create profiles with availability, pricing, and services offered. Includes messaging, GPS walk tracking, and emergency contact sharing.",
-      "tags": ["pets", "marketplace", "local"],
-      "createdAt": "2025-04-26T11:20:00.000Z"
-    },
-    {
-      "id": "6",
-      "title": "Remote Job Recommender",
-      "summary": "Smart job matches using your online presence.",
-      "description": "An AI-powered platform that analyzes your GitHub, LinkedIn, resume, and public portfolios to find remote jobs that align with your skills and goals. Users receive a daily or weekly feed of tailored listings, and the system learns from their clicks and applications to improve recommendations over time.",
-      "tags": ["jobs", "remote", "ai"],
-      "createdAt": "2025-04-24T13:10:00.000Z"
-    }
+
+  {
+    "id": "1",
+    "title": "AI-Powered SOP Builder for Small Businesses",
+    "summary": "Turns screen recordings into step-by-step training docs automatically.",
+    "description": "A tool for small businesses to capture their workflows by simply recording their screen. The AI watches the recording, detects clicks, form fills, and navigation, then automatically generates a professional SOP with screenshots, written steps, and a video walkthrough. Perfect for onboarding new staff and documenting processes without writing manuals.",
+    "tags": ["AI", "SaaS", "productivity", "B2B"],
+    "createdAt": "2026-05-12T09:15:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "2",
+    "title": "Local Farm Box Subscription",
+    "summary": "Weekly produce delivery from nearby farms.",
+    "description": "A subscription box service connecting local farmers with urban dwellers looking for fresh produce. Customers receive a curated box each week containing fruits, vegetables, and artisanal goods sourced directly from nearby growers. It encourages local commerce, healthy eating, and seasonal variety.",
+    "tags": ["subscription", "local", "marketplace"],
+    "createdAt": "2026-04-28T14:30:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "3",
+    "title": "ContractLens - AI Contract Risk Scanner",
+    "summary": "Upload any contract and get instant risk analysis in plain English.",
+    "description": "ContractLens is designed for freelancers and startup founders who can't afford a lawyer for every contract. Users upload a PDF, and the AI highlights risky clauses, unusual payment terms, auto-renewals, and missing protections. It provides a risk score, suggests redlines, and explains everything in simple language before you sign.",
+    "tags": ["AI", "legaltech", "SaaS", "freelancers"],
+    "createdAt": "2026-06-01T11:00:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "4",
+    "title": "ChurnGuard - Subscription Cancellation Saver",
+    "summary": "An API that reduces SaaS churn with smart retention offers.",
+    "description": "A plug-and-play widget for any subscription business. When a user clicks 'cancel', ChurnGuard triggers a personalized retention flow based on their usage data and cancellation reason. It can offer a pause, a discount, a plan downgrade, or collect feedback. It integrates with Stripe and Paddle in one click and has been shown to recover up to 35% of cancellations.",
+    "tags": ["SaaS", "API", "retention", "fintech"],
+    "createdAt": "2025-05-20T16:45:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "5",
+    "title": "Stack - Headless Review Infrastructure",
+    "summary": "Collect and display authentic testimonials anywhere with one snippet.",
+    "description": "Stack is like Stripe for social proof. Instead of relying on Google or Trustpilot, businesses can collect video, text, and audio reviews via a link, moderate them, and display them on their website with a lightweight widget. Includes AI-powered sentiment analysis, spam detection, and automatic showcase of the best reviews for conversion optimization.",
+    "tags": ["SaaS", "developer-tools", "marketing"],
+    "createdAt": "2025-04-15T08:20:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "6",
+    "title": "BuildBrief - Construction Site Voice-to-Report",
+    "summary": "Field workers speak, the app creates daily progress reports.",
+    "description": "A mobile-first app for construction foremen and contractors. Workers dictate progress, issues, and material needs in their native language on-site. The AI transcribes, translates, structures it into a daily log with photos, weather data, and labor hours, and auto-sends it to clients and project managers. Eliminates hours of paperwork.",
+    "tags": ["contech", "mobile", "AI", "voice"],
+    "createdAt": "2025-05-02T13:10:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "7",
+    "title": "AdFix - Automated Creative Fatigue Detector",
+    "summary": "Detects when your Meta/Google ads are dying and generates replacements.",
+    "description": "AdFix connects to your Meta Ads and Google Ads accounts and monitors CTR, frequency, and ROAS. When it detects creative fatigue before performance drops, it alerts you and uses generative AI to create 3 new variations of your winning ad based on your brand kit. Helps media buyers scale without constantly designing new creatives.",
+    "tags": ["adtech", "AI", "automation", "marketing"],
+    "createdAt": "2025-06-10T10:00:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "8",
+    "title": "HireLoop - Async Technical Hiring Platform",
+    "summary": "Replace first-round interviews with real-world coding challenges.",
+    "description": "HireLoop helps startups hire developers without endless interviews. Instead of LeetCode, candidates complete a 45-minute real-world task inside a sandboxed VS Code environment (e.g., 'fix this bug in this API'). The platform records their process, runs tests, and generates a skill report for hiring managers. Reduces time-to-hire by 70%.",
+    "tags": ["HRtech", "developer-tools", "hiring", "B2B"],
+    "createdAt": "2025-03-22T18:30:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "9",
+    "title": "LedgerSync - Multi-Store Inventory Reconciler",
+    "summary": "One dashboard to sync inventory across Shopify, Etsy, and Amazon.",
+    "description": "Built for small e-commerce brands selling on multiple marketplaces. LedgerSync provides real-time inventory syncing, prevents overselling, consolidates orders into one dashboard, and provides profitability analytics per product per channel. Includes low-stock alerts and automatic purchase order generation for suppliers.",
+    "tags": ["ecommerce", "SaaS", "inventory", "marketplace"],
+    "createdAt": "2025-04-10T12:00:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "10",
+    "title": "InboxZero AI - Email-to-Task Autopilot",
+    "summary": "AI that turns your inbox into an organized to-do list.",
+    "description": "InboxZero AI connects to Gmail/Outlook and automatically categorizes emails into: To-Respond, FYI, Bills, and Spam. It drafts replies in your writing style, extracts tasks and deadlines to your calendar, and unsubscribes from newsletters you never read. Aimed at founders drowning in email who want to reach inbox zero daily.",
+    "tags": ["AI", "productivity", "email", "automation"],
+    "createdAt": "2025-05-18T07:45:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "11",
+    "title": "Vault - API Key & Secret Leak Prevention",
+    "summary": "Prevents developers from accidentally pushing secrets to GitHub.",
+    "description": "Vault is a lightweight CLI and GitHub App that scans every commit locally before it is pushed. It detects API keys, .env files, and private tokens using entropy detection and pattern matching, then blocks the push and offers to automatically move the secret to a secure vault and replace it with an environment variable reference.",
+    "tags": ["devtools", "security", "developer-tools", "B2B"],
+    "createdAt": "2025-06-05T15:20:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "12",
+    "title": "LocalizeLive - Instant Website Localization",
+    "summary": "Translate and localize your SaaS in 30 languages without code.",
+    "description": "Add one script tag to your website and LocalizeLive automatically detects all text, translates it using context-aware AI, and lets you edit translations visually. It handles currencies, date formats, and even RTL languages. It serves the right language based on the visitor's location, boosting conversion for global SaaS products.",
+    "tags": ["SaaS", "localization", "developer-tools", "global"],
+    "createdAt": "2025-03-30T09:00:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "13",
+    "title": "FlowState - Creator Sponsorship Marketplace",
+    "summary": "Connects micro-influencers with brands for instant paid deals.",
+    "description": "FlowState is a marketplace where brands can find and book YouTubers, TikTokers, and Instagram creators with 5k-100k followers. Unlike other platforms, it handles contracts, payments, content approval, and performance tracking in one place. Creators get an instant media kit generated from their socials, and brands pay only for verified deliverables.",
+    "tags": ["marketplace", "creator-economy", "SaaS", "influencer"],
+    "createdAt": "2025-05-25T20:10:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "14",
+    "title": "DocuChat - Talk to Your Company Documents",
+    "summary": "A ChatGPT for your internal Notion, Google Drive, and PDFs.",
+    "description": "DocuChat is an internal knowledge base AI. Connect your Notion, Google Drive, Confluence, and Slack, and it creates a searchable brain for your company. Employees can ask questions like 'What is our refund policy?' or 'How do we deploy to production?' and get instant answers with source links, reducing interruptions for founders.",
+    "tags": ["AI", "knowledge-management", "B2B", "search"],
+    "createdAt": "2025-04-02T11:30:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "15",
+    "title": "MeetMind - AI Meeting Follow-Up Automator",
+    "summary": "Never write meeting notes or follow-up emails again.",
+    "description": "MeetMind integrates with Zoom and Google Meet, transcribes calls, identifies action items, decisions, and owners, and automatically sends a summary to all participants, creates tasks in Asana/Trello, and schedules follow-ups. It also tracks commitments made in meetings and reminds owners before deadlines.",
+    "tags": ["AI", "productivity", "meetings", "automation"],
+    "createdAt": "2025-06-15T14:00:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "16",
+    "title": "GreenRoute - Carbon-Aware Delivery Optimization",
+    "summary": "Route optimization for delivery fleets that cuts fuel and emissions.",
+    "description": "An API for logistics companies and e-commerce delivery fleets. GreenRoute calculates the most fuel-efficient route not just based on distance, but on traffic, elevation, vehicle load, and weather. It provides carbon emission reports for ESG compliance and helps companies save up to 25% on fuel costs while hitting sustainability goals.",
+    "tags": ["logistics", "cleantech", "API", "optimization"],
+    "createdAt": "2025-03-18T10:45:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "17",
+    "title": "FormForge - Conversational Typeform Alternative",
+    "summary": "AI forms that feel like a human chat and convert 3x better.",
+    "description": "FormForge replaces boring static forms with an AI interviewer that adapts its questions based on previous answers. It can qualify leads, conduct user research, and collect onboarding data with a conversational UI. Includes built-in logic, Stripe payments, and automatic lead scoring synced to your CRM.",
+    "tags": ["SaaS", "forms", "AI", "conversion"],
+    "createdAt": "2025-05-08T17:00:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "18",
+    "title": "TestPilot - No-Code User Testing at Scale",
+    "summary": "Get 10 user testing videos for your new feature in 2 hours.",
+    "description": "TestPilot allows product managers to submit a Figma prototype or staging link and a task like 'Try to buy a shoe'. It then distributes the task to its pool of vetted testers who record their screen and voice while attempting it. AI summarizes pain points, confusion moments, and sentiment, giving you actionable UX insights overnight.",
+    "tags": ["UX", "testing", "no-code", "productivity"],
+    "createdAt": "2025-04-22T13:55:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "19",
+    "title": "PayPer - Usage-Based Billing Infrastructure",
+    "summary": "Stripe Billing for metered, seat + usage hybrid pricing.",
+    "description": "PayPer is billing infrastructure for modern AI and API startups who charge based on usage. It handles metering, aggregation, real-time usage dashboards for customers, overage handling, and invoicing. It plugs into Stripe and lets you implement complex pricing like '$20 base + $0.02 per 1000 tokens' in minutes instead of weeks.",
+    "tags": ["fintech", "API", "SaaS", "billing"],
+    "createdAt": "2025-06-12T09:30:00.000Z",
+    "dot": "bg-violet-500"
+  },
+  {
+    "id": "20",
+    "title": "SafeShare - Temporary Credential Sharing",
+    "summary": "Share logins and files without ever revealing the password.",
+    "description": "SafeShare is for agencies and remote teams who need to share access to tools, social accounts, and documents. Instead of sending passwords in Slack, you share a secure link that grants temporary, revocable access through a proxied browser session. The recipient never sees the password, and access auto-expires. Full audit log included.",
+    "tags": ["security", "SaaS", "collaboration", "B2B"],
+    "createdAt": "2026-05-30T19:20:00.000Z",
+    "dot": "bg-violet-500"
+  }
+
   ]
 }

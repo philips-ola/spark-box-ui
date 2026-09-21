@@ -65,7 +65,7 @@ function IdeaPage() {
             />
           </div>
           <button className="rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-medium hover:bg-zinc-50">
-            Filter
+            Search
           </button>
         </div>
       </div>
@@ -83,7 +83,7 @@ function IdeaPage() {
                 <span className="rounded-full bg-zinc-100 px-2.5 py-1 text- font-medium tracking-wide text-zinc-600">
                   CONCEPT
                 </span>
-                <span className="text- text-zinc-400">2d ago</span>
+                <span className="text- text-zinc-400">{new Date(idea.createdAt).toLocaleDateString()}</span>
               </div>
 
               <h2 className="mt-5 text- font-semibold leading-tight tracking-tight text-zinc-900 line-clamp-2 group-hover:text-black">

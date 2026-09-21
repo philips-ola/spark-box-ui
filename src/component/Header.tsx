@@ -1,14 +1,14 @@
 import { Link } from '@tanstack/react-router';
-import { Lightbulb } from 'lucide-react';
+import {Rocket } from 'lucide-react';
 
 const Header = () => {
   return (
     <header className='bg-white shadow'>
-      <div className='container mx-auto px-6 py-4 flex justify-between items-center'>
+      <div className='container mx-auto px-6 lg:px-14 py-4 flex justify-between items-center'>
         <div className='flex items-center space-x-2 text-gray-800'>
           <Link to='/' className='flex items-center space-x-2 text-gray-800'>
-            <Lightbulb className='w-6 h-6 text-yellow-500' />
-            <h1 className='text-2xl font-bold'>IdeaDrop</h1>
+            <Rocket className='w-6 h-6 text-blue-500' />
+            <h1 className='text-2xl font-bold'>SparkBox</h1>
           </Link>
         </div>
 

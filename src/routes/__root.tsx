@@ -38,11 +38,11 @@ head: () => ({
 
 function RootComponent() {
   return (
-    <div className='min-h-screen bg-gray-100 flex flex-col'>
+    <div>
       <HeadContent />
       <Header />
       <main className='flex justify-center p-6'>
-        <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8">
+        <div className="w-full max-w-6xl bg-white rounded-2xl shadow-lg p-8">
       <Outlet />
       </div>
       <TanStackDevtools
