@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import {Rocket } from 'lucide-react';
+import {Sparkles } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -7,15 +7,21 @@ const Header = () => {
       <div className='container mx-auto px-6 lg:px-14 py-4 flex justify-between items-center'>
         <div className='flex items-center space-x-2 text-gray-800'>
           <Link to='/' className='flex items-center space-x-2 text-gray-800'>
-            <Rocket className='w-6 h-6 text-blue-500' />
+            <Sparkles className='bg-blue-100 py-1 rounded-2xl w-8 h-8 text-blue-500' />
             <h1 className='text-2xl font-bold'>SparkBox</h1>
           </Link>
         </div>
 
         <nav className='flex items-center space-x-4'>
           <Link
+            to='/'
+            className='text-gray-600 hover:text-gray-900 font-medium transition leading-none'
+          >
+            Home
+          </Link>
+          <Link
             to='/ideas'
-            className='text-gray-600 hover:text-gray-900 font-medium transition px-3 py-2 leading-none'
+            className='text-gray-600 hover:text-gray-900 font-medium transition leading-none'
           >
             Ideas
           </Link>
@@ -23,7 +29,7 @@ const Header = () => {
             to='/ideas/new'
             className='bg-blue-600 hover:bg-blue-700 text-white font-medium transition px-4 py-2 rounded-md leading-none'
           >
-            + New Idea
+            + Submit Idea
           </Link>
         </nav>
       </div>

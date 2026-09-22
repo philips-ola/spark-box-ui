@@ -1,16 +1,12 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { queryOptions, useSuspenseQuery } from '@tanstack/react-query'
-import type { Idea } from '#/types'
-import api from '#/lib/axios'
+import { fetchIdeas } from '#/api/ideas';
 
-
-const fetchIdeas = async (): Promise<Idea> => {
-    const res = await api.get(`/ideas`);
-    return res.data;
-}
 
 const ideasQueryOptions =() => queryOptions({
-  queryKey: ['ideaId'],
+  queryKey: ['ideas'],
+
+  // From api/idea.ts/fetchIdeas
   queryFn: () => fetchIdeas()
 })
 
@@ -25,7 +21,7 @@ export const Route = createFileRoute('/ideas/')({
     ]
   }),
 
-  component: IdeaPage,
+  component: IdeasPage,
 
      // Loader
   loader: async ({context: {queryClient}}) => {
@@ -34,9 +30,12 @@ export const Route = createFileRoute('/ideas/')({
 
 });
 
-function IdeaPage() {
+function IdeasPage() {
 
-  const {data: ideas} = useSuspenseQuery(ideasQueryOptions());
+  const { data } = useSuspenseQuery(ideasQueryOptions());
+  const ideas = [...data].sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  )
 
    return (
     <div className="min-h-screen bg-[#fbfbfa] px-4 py-8 sm:px-6 lg:px-8">
@@ -48,7 +47,7 @@ function IdeaPage() {
               {ideas.length} ACTIVE IDEAS
             </div>
             <h1 className="mt-4 text-4xl font-bold tracking-tight text-zinc-900">
-              Empower Your Mind With Great Ideas
+              Empower Your Vision With Great Ideas
             </h1>
             <p className="mt-2 text-sm text-zinc-500 max-w-lg">
               Explore, refine and ship your best concepts. Curated for clarity.
@@ -81,15 +80,16 @@ function IdeaPage() {
             <div>
               <div className="flex items-center justify-between">
                 <span className="rounded-full bg-zinc-100 px-2.5 py-1 text- font-medium tracking-wide text-zinc-600">
-                  CONCEPT
+                  TAGS  
+              
                 </span>
                 <span className="text- text-zinc-400">{new Date(idea.createdAt).toLocaleDateString()}</span>
               </div>
 
-              <h2 className="mt-5 text- font-semibold leading-tight tracking-tight text-zinc-900 line-clamp-2 group-hover:text-black">
+              <h2 className="mt-5 text-[1.5rem] font-semibold leading-tight tracking-tight text-zinc-900 line-clamp-2 group-hover:text-black">
                 {idea.title}
               </h2>
-              <p className="mt-2.5 text- leading-6 text-zinc-500 line-clamp-3">
+              <p className="mt-2.5 text-[1rem] leading-6 text-zinc-500 line-clamp-3">
                 {idea.summary}
               </p>
             </div>

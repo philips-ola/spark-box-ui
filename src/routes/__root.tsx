@@ -42,7 +42,7 @@ function RootComponent() {
       <HeadContent />
       <Header />
       <main className='flex justify-center p-6'>
-        <div className="w-full max-w-6xl bg-white rounded-2xl shadow-lg p-8">
+        <div className="w-full max-w-6xl bg-white rounded-2xl shadow-lg p-4">
       <Outlet />
       </div>
       <TanStackDevtools
