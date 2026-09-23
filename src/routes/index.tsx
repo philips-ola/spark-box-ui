@@ -3,6 +3,7 @@ import { Rocket, ArrowUpRight, Code2} from 'lucide-react'
 import { queryOptions, useSuspenseQuery } from '@tanstack/react-query'
 import { FaGithub, FaLinkedin, FaYoutube} from 'react-icons/fa'
 import { fetchIdeas } from '#/api/ideas'
+import IdeaCard from '#/component/IdeaCard'
 
 
 const ideasQueryOptions = () => queryOptions({
@@ -114,31 +115,16 @@ function Home() {
               <h2 className="text- font-bold tracking-tight">Ideas</h2>
             </div>
 
-            <ul className="space-y-4">
-              {latestIdeas.map((idea) => (
-                <li key={idea.id} className="group rounded- bg-white border border-slate-200 p-6 hover:shadow-lg hover:-translate-y- transition-all">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="bg-slate-100 rounded-full px-2.5 py-1 text- text-slate-600">
-                      {new Date(idea.createdAt).toLocaleDateString()}
-                    </span>
-                  </div>
-                  <h3 className="text-[1.5rem] font-semibold">{idea.title}</h3>
-                  <p className="mt-2 text-[1rem] text-slate-500">{idea.summary}</p>
-
-                  {/* Link to single page */}
-                  <Link
-                    to="/ideas/$ideaId"
-                    params={{ ideaId: idea.id.toString() }}
-                    className="mt-5 inline-flex items-center gap-1.5 text- font-medium text-slate-900 group-hover:text-blue-600 transition-colors"
-                  >
-                    Read idea
-                    <span className="w-5 h-5 rounded-full bg-slate-900 group-hover:bg-blue-600 text-white inline-flex items-center justify-center transition-colors">
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+      <ul className="max-w-7xl mx-auto grid grid-cols-1 gap-6">
+        {ideas.map((idea) => (
+          <li
+            key={idea.id}
+            className="group relative flex flex-col justify-between rounded- border border-zinc-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-zinc-300"
+          >
+            <IdeaCard idea={idea} />
+          </li>
+        ))}
+      </ul>
 
             <Link to="/ideas" className="mt-6 w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 px-5 py-3.5 text-white font-semibold shadow-lg hover:shadow-xl transition-all">
               View All Ideas <ArrowUpRight className="w-4 h-4" />

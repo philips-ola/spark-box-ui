@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { queryOptions, useSuspenseQuery } from '@tanstack/react-query'
 import { fetchIdeas } from '#/api/ideas';
+import IdeaCard from '#/component/IdeaCard';
 
 
 const ideasQueryOptions =() => queryOptions({
@@ -70,45 +71,12 @@ function IdeasPage() {
       </div>
 
       {/* Grid */}
-      <ul className="max-w-7xl mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
+      <ul className="max-w-7xl mx-auto grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-2">
         {ideas.map((idea) => (
-          <li
-            key={idea.id}
+            <li key={idea.id} 
             className="group relative flex flex-col justify-between rounded- border border-zinc-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-zinc-300"
           >
-            {/* top */}
-            <div>
-              <div className="flex items-center justify-between">
-                <span className="rounded-full bg-zinc-100 px-2.5 py-1 text- font-medium tracking-wide text-zinc-600">
-                  TAGS  
-              
-                </span>
-                <span className="text- text-zinc-400">{new Date(idea.createdAt).toLocaleDateString()}</span>
-              </div>
-
-              <h2 className="mt-5 text-[1.5rem] font-semibold leading-tight tracking-tight text-zinc-900 line-clamp-2 group-hover:text-black">
-                {idea.title}
-              </h2>
-              <p className="mt-2.5 text-[1rem] leading-6 text-zinc-500 line-clamp-3">
-                {idea.summary}
-              </p>
-            </div>
-
-            {/* footer */}
-            <div className="mt-6 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="h-6 w-6 rounded-full bg-gradient-to-br from-violet-500 to-zinc-900" />
-                <span className="text-xs text-zinc-500">By you</span>
-              </div>
-
-              <Link
-                to="/ideas/$ideaId"
-                params={{ ideaId: idea.id.toString() }}
-                className="inline-flex items-center gap-1.5 rounded-full bg-zinc-900 px-4 py-2 text-xs font-medium text-white transition hover:bg-black group-hover:gap-2"
-              >
-                View Idea <span aria-hidden>→</span>
-              </Link>
-            </div>
+          <IdeaCard idea={idea} />
           </li>
         ))}
       </ul>

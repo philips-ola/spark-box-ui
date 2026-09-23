@@ -35,3 +35,17 @@ export const createIdea = async (newIdeas: {
    export const deleteIdea = async(ideaId: string):Promise<void> => {
         await api.delete(`/ideas/${ideaId}`);
     }
+
+    // Update an Idea
+    export const updateIdea = async (
+        ideaId: string,
+        updatedData: {
+            title: string;
+            summary: string;
+            description: string;
+            tags: string[];
+        }
+    ): Promise<Idea> => {
+            const res = await api.patch(`/ideas/${ideaId}`, updatedData);
+            return res.data;
+        }

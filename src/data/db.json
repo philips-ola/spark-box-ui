@@ -1,7 +1,6 @@
 {
   "ideas": [
     {
-      "id": "1",
       "title": "AI-Powered SOP Builder for Small Businesses",
       "summary": "Turns screen recordings into step-by-step training docs automatically.",
       "description": "A tool for small businesses to capture their workflows by simply recording their screen. The AI watches the recording, detects clicks, form fills, and navigation, then automatically generates a professional SOP with screenshots, written steps, and a video walkthrough. Perfect for onboarding new staff and documenting processes without writing manuals.",
@@ -11,11 +10,10 @@
         "productivity",
         "B2B"
       ],
-      "createdAt": "2026-09-22T09:15:00.000Z",
-      "dot": "bg-violet-500"
+      "id": "1",
+      "createdAt": "2025-05-20T16:45:00.000Z"
     },
     {
-      "id": "2",
       "title": "Local Farm Box Subscription",
       "summary": "Weekly produce delivery from nearby farms.",
       "description": "A subscription box service connecting local farmers with urban dwellers looking for fresh produce. Customers receive a curated box each week containing fruits, vegetables, and artisanal goods sourced directly from nearby growers. It encourages local commerce, healthy eating, and seasonal variety.",
@@ -24,12 +22,11 @@
         "local",
         "marketplace"
       ],
-      "createdAt": "2026-04-28T14:30:00.000Z",
-      "dot": "bg-violet-500"
+      "id": "2",
+      "createdAt": "2025-05-20T16:45:00.000Z"
     },
     {
-      "id": "3",
-      "title": "ContractLens - AI Contract Risk Scanner",
+      "title": "ContractLens - AI Contract Risk Scanner ",
       "summary": "Upload any contract and get instant risk analysis in plain English.",
       "description": "ContractLens is designed for freelancers and startup founders who can't afford a lawyer for every contract. Users upload a PDF, and the AI highlights risky clauses, unusual payment terms, auto-renewals, and missing protections. It provides a risk score, suggests redlines, and explains everything in simple language before you sign.",
       "tags": [
@@ -38,8 +35,8 @@
         "SaaS",
         "freelancers"
       ],
-      "createdAt": "2026-06-01T11:00:00.000Z",
-      "dot": "bg-violet-500"
+      "id": "3",
+      "createdAt": "2025-05-20T16:45:00.000Z"
     },
     {
       "id": "4",
@@ -270,7 +267,7 @@
       "summary": "Share logins and files without ever revealing the password.",
       "description": "SafeShare is for agencies and remote teams who need to share access to tools, social accounts, and documents. Instead of sending passwords in Slack, you share a secure link that grants temporary, revocable access through a proxied browser session. The recipient never sees the password, and access auto-expires. Full audit log included.",
       "tags": [
-        "security",
+        "securities",
         "SaaS",
         "collaboration",
         "B2B"
