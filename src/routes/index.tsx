@@ -116,7 +116,7 @@ function Home() {
             </div>
 
       <ul className="max-w-7xl mx-auto grid grid-cols-1 gap-6">
-        {ideas.map((idea) => (
+        {latestIdeas.map((idea) => (
           <li
             key={idea.id}
             className="group relative flex flex-col justify-between rounded- border border-zinc-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-zinc-300"
