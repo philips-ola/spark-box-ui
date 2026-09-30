@@ -16,6 +16,7 @@ const IdeaCard = ({ idea }: Props) => {
   return (
     <>
       {/* top */}
+     
       <div>
         <div className="flex items-center justify-between">
           <span className="flex flex-wrap gap-1">
@@ -47,7 +48,7 @@ const IdeaCard = ({ idea }: Props) => {
 
         <Link
           to="/ideas/$ideaId"
-          params={{ ideaId: idea.id.toString() }}
+          params={{ ideaId: idea._id.toString() }}
           className="inline-flex items-center gap-1.5 rounded-full bg-zinc-900 px-4 py-2 text-xs font-medium text-white transition hover:bg-black group-hover:gap-2"
         >
           View Idea <span aria-hidden>→</span>

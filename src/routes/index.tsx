@@ -7,24 +7,26 @@ import IdeaCard from '#/component/IdeaCard'
 
 
 const ideasQueryOptions = () => queryOptions({
-  queryKey: ['ideas'],
+  queryKey: ['ideas', {limit: 5}],
 
   // From api/idea.ts/fetchIdea
-  queryFn: fetchIdeas
+  queryFn: () => fetchIdeas(5)
 })
 
 export const Route = createFileRoute('/')({
-  component: Home,
+  component: HomePage,
   loader: async ({context: {queryClient}}) => {
     return queryClient.ensureQueryData(ideasQueryOptions());
   }
 })
 
-function Home() {
-  const {data} = useSuspenseQuery(ideasQueryOptions());
-    const ideas = [...(data?? [])].sort(
-      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-  const latestIdeas = ideas.slice(0, 5);
+function HomePage() {
+  const {data:ideas} = useSuspenseQuery(ideasQueryOptions());
+  // const ideas = Array.isArray(data) ? data : data?.data ?? data?.ideas ?? [];
+    // const ideas = [...(data?? [])]
+  //   .sort(
+  //     (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  // const latestIdeas = ideas.slice(0, 5);
 
   return (
     <div className="min-h-screen bg-[#f8f9fb] text-slate-900 antialiased">
@@ -111,14 +113,14 @@ function Home() {
                 <Rocket className="w-4 h-4" />
               </div>
               <h2 className="text- font-bold tracking-tight">Latest</h2>
-              <span className="rounded-full bg-slate-900 text-white text- px-3 py-0.2">{latestIdeas.length} New</span>
+              <span className="rounded-full bg-slate-900 text-white text- px-3 py-0.2">{ideas.length} New</span>
               <h2 className="text- font-bold tracking-tight">Ideas</h2>
             </div>
 
       <ul className="max-w-7xl mx-auto grid grid-cols-1 gap-6">
-        {latestIdeas.map((idea) => (
+        {ideas.map((idea) => (
           <li
-            key={idea.id}
+            key={idea._id}
             className="group relative flex flex-col justify-between rounded- border border-zinc-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-zinc-300"
           >
             <IdeaCard idea={idea} />

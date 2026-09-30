@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import { queryOptions, useSuspenseQuery } from '@tanstack/react-query'
 import { fetchIdeas } from '#/api/ideas';
 import IdeaCard from '#/component/IdeaCard';
@@ -33,10 +33,10 @@ export const Route = createFileRoute('/ideas/')({
 
 function IdeasPage() {
 
-  const { data } = useSuspenseQuery(ideasQueryOptions());
-  const ideas = [...data].sort(
-    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-  )
+  const { data: ideas } = useSuspenseQuery(ideasQueryOptions());
+  // const ideas = [...data].sort(
+  //   (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  // )
 
    return (
     <div className="min-h-screen bg-[#fbfbfa] px-4 py-8 sm:px-6 lg:px-8">
@@ -73,7 +73,7 @@ function IdeasPage() {
       {/* Grid */}
       <ul className="max-w-7xl mx-auto grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-2">
         {ideas.map((idea) => (
-            <li key={idea.id} 
+            <li key={idea._id} 
             className="group relative flex flex-col justify-between rounded- border border-zinc-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-zinc-300"
           >
           <IdeaCard idea={idea} />
