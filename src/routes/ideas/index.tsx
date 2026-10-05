@@ -4,30 +4,30 @@ import { fetchIdeas } from '#/api/ideas';
 import IdeaCard from '#/component/IdeaCard';
 
 
-const ideasQueryOptions =() => queryOptions({
+const ideasQueryOptions = () => queryOptions({
   queryKey: ['ideas'],
 
   // From api/idea.ts/fetchIdeas
-  queryFn: () => fetchIdeas()
-})
+  queryFn: () => fetchIdeas(),
+});
 
 
 export const Route = createFileRoute('/ideas/')({
 
   head: () => ({
-    meta:[
+    meta: [
       {
-        title: 'Spark Box | Project ideas'
-      }
-    ]
+        title: 'Spark Box | Project ideas',
+      },
+    ],
   }),
 
   component: IdeasPage,
 
-     // Loader
-  loader: async ({context: {queryClient}}) => {
-   return queryClient.ensureQueryData(ideasQueryOptions());
-     }
+  // Loader
+  loader: async ({ context: { queryClient } }) => {
+    return queryClient.ensureQueryData(ideasQueryOptions());
+  },
 
 });
 
@@ -44,7 +44,7 @@ function IdeasPage() {
       <div className="max-w-7xl mx-auto mb-8">
         <div className="flex items-end justify-between">
           <div>
-            <div className="inline-flex items-center rounded-full bg-zinc-900 px-3 py-1 text- font-medium tracking-widest text-white">
+            <div className="inline-flex items-center rounded-full bg-zinc-900 px-3 py-1 text-xs font-medium tracking-widest text-white">
               {ideas.length} ACTIVE IDEAS
             </div>
             <h1 className="mt-4 text-4xl font-bold tracking-tight text-zinc-900">
@@ -73,11 +73,12 @@ function IdeasPage() {
       {/* Grid */}
       <ul className="max-w-7xl mx-auto grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-2">
         {ideas.map((idea) => (
-            <li key={idea._id} 
-            className="group relative flex flex-col justify-between rounded- border border-zinc-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-zinc-300"
-          >
-          <IdeaCard idea={idea} />
-          </li>
+            <li
+              key={idea._id}
+              className="group relative flex flex-col justify-between rounded-xl border border-zinc-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-zinc-300"
+            >
+              <IdeaCard idea={idea} />
+            </li>
         ))}
       </ul>
     </div>
