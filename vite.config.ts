@@ -15,7 +15,7 @@ const config = defineConfig({
     viteReact(),
   ],
 
-  // Setting up the proxy
+  //Setting up the proxy
   server: {
     proxy: {
       '/api': {

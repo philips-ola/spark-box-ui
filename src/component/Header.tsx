@@ -68,7 +68,7 @@ return (
               </span>
               <button
                 onClick={handleLogout}
-                className='text-red-500 hover:text-red-700 font-medium transition text-sm'
+                className='cursor-pointer text-red-500 hover:text-red-700 font-medium transition text-sm'
               >
                 Logout
               </button>
