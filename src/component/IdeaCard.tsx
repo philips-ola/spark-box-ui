@@ -46,7 +46,7 @@ const IdeaCard = ({ idea }: Props) => {
         <div className="flex items-center gap-2">
           <div className="h-6 w-6 rounded-full bg-gradient-to-br from-violet-500 to-zinc-900" />
           <span className="text-xs text-zinc-500">
-          By {user?.id === idea.user ? user.name : "Anonymous"}
+          By {idea.user?.name || "Anonymous"}
         </span>
         </div>
 

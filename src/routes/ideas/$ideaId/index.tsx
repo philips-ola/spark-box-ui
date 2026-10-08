@@ -47,7 +47,6 @@ function IdeaDetailsPage() {
    ? (idea.tags as string).split(',').map(t => t.trim()).filter(Boolean)
     : []
 
-
   return <div className='p-4'>
     <Link to='/ideas' className='text-blue-500 underline block mb-4'>
     Back to Ideas
@@ -55,29 +54,10 @@ function IdeaDetailsPage() {
     <h2 className="text-2xl font-bold">{idea.title}</h2>
     <p className="mt-2">{idea.description}</p>
 
-    <div className='my-4 bg-gray-200 h-1' />
-
-    <div className="flex items-center justify-between">
-    <span className="flex flex-wrap gap-1">
-      <span className='mr-2'>Tags:</span> {tags.slice(0, 3).map((tag: string) => (
-        <span key={tag} className="px-2 mr-2 py-1 bg-zinc-100 rounded-full text-xs">
-          {tag}
-        </span>
-      ))}
-    </span>
-    <span className="text-xm text-zinc-400">
-      <span className='mr-2'>Published By:</span> {user.id === idea.user? user.name: 'Anonymous'}
-    </span>
-    <span className="text-xm text-zinc-400">
-      <span className='mr-2'>Published on:</span> {idea.createdAt? new Date(idea.createdAt).toLocaleDateString() : ''}
-    </span>
-  </div>
 
 
-
-
-    {/* Edit Link */}
-    {user && user.id === idea.user && (
+        {/* Edit Link */}
+    {user && user.id === idea.user._id &&   (
       <>
     <Link to='/ideas/$ideaId/edit' params={{ideaId}} className='inline-block text-sm bg-yellow-500 hover:bg-yellow-600 text-white mt-4 mr-2 px-4 py-2 rounded transition'>
     Edit
@@ -89,6 +69,26 @@ function IdeaDetailsPage() {
     </button>
     </>
     )}
-    
+
+    <div className='my-4 bg-gray-200 h-1' />
+
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 py-2">
+    <span className="flex flex-wrap gap-1">
+      <span className='mr-2 text-zinc-400'>Tags:</span> {tags.slice(0, 3).map((tag: string) => (
+        <span key={tag} className="px-2 mr-2 py-1 bg-zinc-100 rounded-full text-xs">
+          {tag}
+        </span>
+      ))}
+    </span>
+    <span className="text-xm text-zinc-400">
+      <span className='mr-2'>Published By:</span> {idea.user?.name || 'Anonymous'}
+    </span>
+    <span className="text-xm text-zinc-400">
+      <span className='mr-2'>Published on:</span> {idea.createdAt? new Date(idea.createdAt).toLocaleDateString() : ''}
+    </span>
+  </div>
+
+
+
   </div>
 }

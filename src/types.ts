@@ -4,6 +4,6 @@ export type Idea = {
     summary: string;
     description: string;
     tags: string[];
-    user: string;
+    user: {id:string, _id:string, name: string | null};
     createdAt: string
 }

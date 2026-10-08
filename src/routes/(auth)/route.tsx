@@ -1,6 +1,5 @@
 import { createFileRoute, Outlet } from '@tanstack/react-router'
 import { Code2} from 'lucide-react'
-import { FaGithub, FaLinkedin, FaYoutube} from 'react-icons/fa'
 
 
 export const Route = createFileRoute('/(auth)')({
