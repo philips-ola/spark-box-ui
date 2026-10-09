@@ -57,7 +57,7 @@ function IdeasPage() {
         </div>
 
         {/* Search bar - UI only */}
-        <div className="mt-8 flex gap-3">
+        {/* <div className="mt-8 flex gap-3">
           <div className="flex-1 relative">
             <input
               placeholder="Search ideas..."
@@ -67,7 +67,7 @@ function IdeasPage() {
           <button className="rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-medium hover:bg-zinc-50">
             Search
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Grid */}

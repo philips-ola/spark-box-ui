@@ -17,11 +17,11 @@ export function Footer() {
               </div>
               <span className="text-xl font-bold tracking-tight">SparkBox</span>
             </Link>
-            <p className="text-sm text-zinc-500 mt-4 leading-relaxed max-w-xs">
+            <p className="text-[1rem] text-zinc-500 mt-4 leading-relaxed max-w-xs">
               Where ideas stop scrolling and start building. Share what you won't build, 
               explore what you could.
             </p>
-            <p className="text-xs text-zinc-400 mt-3 font-medium">
+            <p className="text-[1rem] text-zinc-400 mt-3 font-medium">
               EXPRESS.JS + REACT.JS
             </p>
           </div>
@@ -30,7 +30,7 @@ export function Footer() {
           <div className="flex gap-12 md:gap-50 sm:gap-30 lg:w-[50%]">
             <div>
               <h4 className="text-sm font-semibold text-zinc-900 mb-4">Explore</h4>
-              <ul className="space-y-3 text-sm text-zinc-500">
+              <ul className="space-y-3 text-[1rem] text-zinc-500">
                 <li><Link to="/" className="hover:text-zinc-900 transition"> {'> '}Home</Link></li>
                 <li><Link to="/ideas" className="hover:text-zinc-900 transition"> {'> '} Ideas</Link></li>
                 <li><Link to="/ideas/new" className="hover:text-zinc-900 transition"> {'> '} Submit Idea</Link></li>
@@ -38,10 +38,10 @@ export function Footer() {
             </div>
 
             <div className='lg:w-[40%]'>
-              <h4 className="text-sm font-semibold text-zinc-900 mb-4">Let's Connect</h4>
-              <ul className="space-y-3 text-sm text-zinc-500">
+              <h4 className="text-[1rem] font-semibold text-zinc-900 mb-4">Let's Connect</h4>
+              <ul className="space-y-3 text-[1rem] text-zinc-500">
                 <li>Philips Ola</li>
-                <li className="text-xs">Builder & Tutor</li>
+                <li className="text-[1rem">Dev. & Tutor</li>
                 <li className="flex gap-2 pt-1">
                 <div className="pt-4 border-t border-slate-100 flex items-center gap-3 w-full">
                   <a

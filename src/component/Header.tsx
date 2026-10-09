@@ -42,6 +42,9 @@ return (
           <Link to='/ideas' className='text-gray-900 hover:text-gray-900 font-medium transition text-[15px]'>
             Ideas
           </Link>
+          <Link to='/about' className='text-gray-900 hover:text-gray-900 font-medium transition text-[15px]'>
+            About
+          </Link>
           {user && (
             <Link
               to='/ideas/new'
@@ -94,6 +97,9 @@ return (
             </Link>
             <Link onClick={() => setIsOpen(false)} to='/ideas' className='text-gray-700 font-medium'>
               Ideas
+            </Link>
+            <Link onClick={() => setIsOpen(false)} to='/about' className='text-gray-700 font-medium'>
+              About
             </Link>
 
             <hr className='border-gray-100' />
