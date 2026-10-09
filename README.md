@@ -80,7 +80,7 @@ Users can browse ideas, view details, and read the full story behind a concept. 
 ![Registration Page](./public/screenshots/register.png)
 
 ### About Me
-![About Me](./public/screenshots/aboutMe.png)
+![About Me](./public/screenshots/aboutme.png)
 
 ## Tech Stack
 
