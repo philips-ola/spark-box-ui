@@ -31,7 +31,7 @@ function HomePage() {
   return (
     <div className="min-h-screen bg-[#f8f9fb] text-slate-900 antialiased">
       <div className="container mx-auto px-6 lg:px-14 py-8 lg:py-12">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
 
           {/* LEFT - 35% */}
           <div className="w-full lg:w-[35%] lg:sticky lg:top-8">
