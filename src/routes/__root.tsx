@@ -5,6 +5,7 @@ import '../styles.css'
 import { QueryClient } from '@tanstack/react-query'
 import Header from '#/component/Header'
 import NotFound from '#/component/NotFound'
+import { Footer } from '#/component/Footer'
 
 // Added
 type RouterContext = {
@@ -42,8 +43,9 @@ function RootComponent() {
       <HeadContent />
       <Header />
       <main className='flex justify-center lg:p-6 md:p-6'>
-        <div className="w-full max-w-6xl bg-white rounded-2xl shadow-lg lg:p-4 md:p-4">
+        <div className="w-full max-w-6xl bg-white rounded-2xl shadow-sm lg:p-4 md:p-4">
       <Outlet />
+      
       </div>
       <TanStackDevtools
         config={{
@@ -57,6 +59,7 @@ function RootComponent() {
         ]}
       />
       </main>
+      <Footer />
     </div>
   )
 }
