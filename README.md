@@ -91,7 +91,7 @@ Users can browse ideas, view details, and read the full story behind a concept. 
 - TanStack Router
 - TanStack Query
 - Axios
-- JSON Server (mock/local API support)
+- Express.js (For Backend)
 - Lucide React icons
 
 ## Project Structure
