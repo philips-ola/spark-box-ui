@@ -8,7 +8,7 @@ The platform is intentionally simple, but it demonstrates important engineering 
 
 Live demo: https://spark-boxs.vercel.app/
 
-GitHub repository: https://github.com/philips-ola/spark-box-ui
+GitHub Backend repository: https://github.com/philips-ola/Spark-Box-API
 
 ## Project Overview
 
